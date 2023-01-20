@@ -47,8 +47,8 @@ group by ExactAreaCode
 3. Find the MIN first_name, the county, and a count of all users in that county for counties with more than 10 users. There will be four results. List the last one. 
   * Hint: MIN, COUNT, JOIN, GROUP BY, HAVING
 
-  SELECT 
-    usersAddress.county, min(first_name), count(*) as total
+ SELECT 
+    usersAddress.county, min(users.first_name), count(county) as total
 FROM
     usersAddress
         join
